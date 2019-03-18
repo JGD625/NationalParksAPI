@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National Parks</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Find a US National Park!</h1>
+
+        <form id="js-form">
+            <label for="search-term">Looking for a trail? A forest? What can we find for you?</label>
+            <input type="text" name="search-term" id="js-search-term">
+
+            <label for="max-results">How many would you like to find?</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">
+            <label for="states">Which states would you like to search?</label>
+            <input type="text" name="states-to-search" id="js-search-states" value="Please use the two letter state code, like GA, TX, AL">
+            <p id="state-list"><a href="https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations">List of state abbreviations</a></p>
+            <input type="submit" id="submit-button" value="Go!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list">
+          </ul>
+          <div id="no-result-message"></div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
